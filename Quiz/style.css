@@ -1,0 +1,213 @@
+
+        /* General styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #FF6F61, #D4A5A5);
+            animation: backgroundAnimation 10s infinite alternate;
+            color: #fff;
+            font-size: 11px;
+        }
+
+        
+        /* Main container styling */
+        .quiz-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 90%;
+            max-width: 700px;
+            margin: auto;
+            transition: all 0.3s ease;
+        }
+
+        /* Level styling */
+        .level {
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .level.locked {
+            cursor: not-allowed;
+            color: #999;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .level.locked::before {
+            content: '🔒';
+            font-size: 2em;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .level.unlocked::before {
+            content: '🔓';
+            font-size: 2em;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .level:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Quiz screen */
+        .quiz-screen {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #fff;
+            border-radius: 15px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            width: 90%;
+            transition: transform 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .quiz-header {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .quiz-question {
+            margin: 20px 0px;
+            font-size: 1.6em;
+            text-align: center;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .quiz-option {
+            padding: 12px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .quiz-option:hover {
+            background-color: #76c7c0;
+            transform: translateY(-2px);
+        }
+
+        .selected {
+            background-color: #76c7c0;
+            color: white;
+        }
+
+        /* Timer Circle */
+        .timer-circle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 10px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+
+        
+
+        
+
+        /* Score Card */
+        .score-card {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+            border: 2px solid #fff;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+            text-align: center;
+            color: #333;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .retry-button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .retry-button:hover {
+            background-color: #76c7c0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 12px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #76c7c0;
+        }
+
+
+        /* New background animation */
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #4A90E2, #50C9C3); } /* New gradient start */
+    50% { background: linear-gradient(135deg, #50C9C3, #4A90E2); } /* New gradient middle */
+    100% { background: linear-gradient(135deg, #4A90E2, #50C9C3); } /* New gradient end */
+}
+
+/* Apply it to body */
+body {
+    animation: backgroundAnimation 15s infinite alternate; /* Change the duration of the animation */
+}

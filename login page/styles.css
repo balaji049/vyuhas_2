@@ -1,0 +1,126 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-panel {
+    width: 50%;
+    background: url('logo\ of\ vyuhas.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensures the image covers the whole panel */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.left-panel h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color:coral
+
+}
+
+.left-panel p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: lightblue;
+}
+
+.sign-up-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #3f51b5;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.illustration img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.right-panel {
+    width: 50%;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.right-panel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color:  #ff6b6b;
+    outline: none;
+  }
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* Centering social icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 15px; /* Space between icons */
+    margin-top: 10px; /* Space above icons */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #333; /* Default icon color */
+    font-size: 24px; /* Icon size */
+}
